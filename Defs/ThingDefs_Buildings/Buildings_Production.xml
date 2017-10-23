@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>DryingRack</defName>
+		<label>drying rack</label>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Production/LeafDryingRack</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>10</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<description>Drying rack used for drying leaves.</description>
+		<costList>      
+			<WoodLog>30</WoodLog>
+		</costList>
+		<Size>(2,1)</Size>
+		<comps>
+			<li Class="Kubouch.CompProperties_UniversalFermenter">
+				<products>
+					<li>
+						<thingDef>DriedLeavesTobacco</thingDef>
+						<ingredientFilter>
+							<thingDefs>
+								<li>TobaccoLeaves</li>
+							</thingDefs>
+						</ingredientFilter>
+						<graphSuffix>_tobacco</graphSuffix>
+						<sunRespect>
+							<min>0.8</min>
+							<max>1.2</max>
+						</sunRespect>
+						<rainRespect>
+							<min>1</min>
+							<max>0</max>
+						</rainRespect>
+						<snowRespect>
+							<min>1</min>
+							<max>0</max>
+						</snowRespect>
+						<windRespect>
+							<min>1</min>
+							<max>1.2</max>
+						</windRespect>
+					</li>
+					<li>
+						<thingDef>DriedLeavesSmokeleaf</thingDef>
+						<ingredientFilter>
+							<thingDefs>
+								<li>SmokeleafLeaves</li>
+							</thingDefs>
+						</ingredientFilter>
+						<graphSuffix>_smokeleaf</graphSuffix>
+					</li>
+				</products>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<tickerType>Rare</tickerType>
+		<rotatable>true</rotatable>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructWood</constructEffect>    
+	</ThingDef>
+
+</ThingDefs>
