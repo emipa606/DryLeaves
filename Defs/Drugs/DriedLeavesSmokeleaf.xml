@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Smokeleaf>
+<Defs>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>DriedLeavesSmokeleaf</defName>
@@ -27,4 +27,4 @@
 		</comps>
 	</ThingDef>
 
-</Smokeleaf>
+</Defs>

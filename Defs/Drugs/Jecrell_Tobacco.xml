@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Tobacco>
+<Defs>
 
 	<ThingDef ParentName="MakeableDrugBase">
 		<defName>TobaccoCigarette</defName>
@@ -222,4 +222,4 @@
 		</stages>
 	</ThoughtDef>
 
-</Tobacco>
+</Defs>

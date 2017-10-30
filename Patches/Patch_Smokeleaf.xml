@@ -1,8 +1,8 @@
 <Patch>
 	<Operation Class="PatchOperationReplace">
-	    <xpath>/Smokeleaf/ThingDef[defName = "SmokeleafJoint"]/costList/SmokeleafLeaves</xpath>
-	    <value>
-                <DriedLeavesSmokeleaf>4</DriedLeavesSmokeleaf>
-	    </value>
+	    <xpath>/Defs/ThingDef[defName = "SmokeleafJoint"]/costList/SmokeleafLeaves</xpath>
+		<value>
+			<DriedLeavesSmokeleaf>4</DriedLeavesSmokeleaf>
+		</value>
 	</Operation>
 </Patch>

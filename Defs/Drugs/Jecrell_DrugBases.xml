@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<DrugBases>
+<Defs>
 	<ThingDef Name="DrugBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
@@ -42,4 +42,4 @@
 		</recipeMaker>
 	</ThingDef>
 
-</DrugBases>
+</Defs>

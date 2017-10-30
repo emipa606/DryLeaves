@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
@@ -40,7 +40,7 @@
 		<costList>      
 			<WoodLog>30</WoodLog>
 		</costList>
-		<Size>(2,1)</Size>
+		<size>(2,1)</size>
 		<comps>
 			<li Class="Kubouch.CompProperties_UniversalFermenter">
 				<products>
@@ -88,4 +88,4 @@
 		<constructEffect>ConstructWood</constructEffect>    
 	</ThingDef>
 
-</ThingDefs>
+</Defs>

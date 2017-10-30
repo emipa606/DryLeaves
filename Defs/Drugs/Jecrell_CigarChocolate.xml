@@ -1,4 +1,4 @@
-<CigarChocolate>
+<Defs>
 
 	<ThingDef ParentName="MakeableDrugBase">
 		<defName>TobaccoCigarChocolate</defName>
@@ -78,4 +78,4 @@
 		</comps>
 	</ThingDef>
 
-</CigarChocolate>
+</Defs>
