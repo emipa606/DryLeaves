@@ -217,7 +217,7 @@
 			<li>
 				<label>Nicotine withdrawal</label>
 				<description>I would kill for a smoke right now.</description>
-				<baseMoodEffect>-25</baseMoodEffect>
+				<baseMoodEffect>-20</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
