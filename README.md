@@ -19,9 +19,9 @@ Reimplements Jecrell's tobacco mod and adds a drying rack building for drying to
 
 # Download #
 
-[Latest version (a18.0.1)](https://gitlab.com/rwmods/dry-leaves/uploads/8afdad98ae7341a49e9683f11d1ce1e0/DryLeaves_a18.0.1.zip)
+[Latest version (b18.1.0)](https://gitlab.com/rwmods/dry-leaves/uploads/b7a51bbd9250aabbf6c982ecf2eddafb/DryLeaves_b18.1.0.zip)
 
-[Universal Fermenter (a18.0.1)](https://gitlab.com/rwmods/universal-fermenter/uploads/e26079af2769199a0c29cb9a7c3be302/UniversalFermenter_a18.0.1.zip)
+[Universal Fermenter (b18.1.0)](https://gitlab.com/rwmods/universal-fermenter/uploads/0871f46462c63ae8d3fd77c6e168c604/UniversalFermenter_b18.1.0.zip)
 
 [All versions](https://gitlab.com/rwmods/dry-leaves/tags)
 
@@ -29,7 +29,7 @@ Reimplements Jecrell's tobacco mod and adds a drying rack building for drying to
 
 Jecrell - original tobacco mod, visit his [Patreon](https://www.patreon.com/jecrell)
 
-Me
+Me - the rest
 
 # License #
 
