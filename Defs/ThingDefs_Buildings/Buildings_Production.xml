@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="BuildingBase" Abstract="True">
+	<!--<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
 		<thingClass>Building</thingClass>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
@@ -14,29 +14,33 @@
 		<statBases>
 			<SellPriceFactor>0.70</SellPriceFactor>
 		</statBases>
-	</ThingDef>
+	</ThingDef>-->
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>DryingRack</defName>
 		<label>drying rack</label>
-		<thingClass>Building</thingClass>
+        <description>Drying rack used for drying smokeleaf and tobacco leaves.</description>
+		<!--<thingClass>Building</thingClass>-->
 		<graphicData>
 			<texPath>Things/Building/Production/LeafDryingRack</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(2,1)</drawSize>
 		</graphicData>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
+        <minifiedDef>MinifiedThing</minifiedDef>
+		<!--<minifiedDef>MinifiedFurniture</minifiedDef>-->
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.45</fillPercent>
 		<pathCost>60</pathCost>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
 		<statBases>
 			<WorkToBuild>600</WorkToBuild>
 			<Mass>10</Mass>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>1.0</Flammability>
-		</statBases>
-		<description>Drying rack used for drying smokeleaf and tobacco leaves.</description>
+		</statBases>		
 		<costList>      
 			<WoodLog>30</WoodLog>
 		</costList>

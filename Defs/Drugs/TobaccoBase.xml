@@ -1,29 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="MakeableDrugBase">
-		<defName>TobaccoCigarette</defName>
-		<label>cigarette</label>
-		<description>Tobacco use can produce a dependency. Can be produced without equipment, at a crafting spot.</description>
-		<graphicData>
-			<texPath>Things/Item/Drug/Tobacco/RollCigarette</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<rotatable>false</rotatable>
-		<statBases>
-			<WorkToMake>60</WorkToMake>
-			<MarketValue>4</MarketValue>
-			<Mass>0.005</Mass>
+    <ThingDef Name="TobaccoBase" ParentName="MakeableDrugBase" Abstract="True">
+        <rotatable>false</rotatable>
+        <techLevel>Neolithic</techLevel>
+        <statBases>
+            <Flammability>1.3</Flammability>
 		</statBases>
-		<techLevel>Neolithic</techLevel>
-		<ingestible>
+        <ingestible>
 			<foodType>Plant, Processed</foodType>
-			<joy>0.20</joy>
-			<baseIngestTicks>720</baseIngestTicks>
+            <joyKind>Chemical</joyKind>
 			<nurseable>true</nurseable>
 			<drugCategory>Social</drugCategory>
 			<ingestSound>Ingest_Smoke</ingestSound>
 			<ingestEffect>Smoke_Joint</ingestEffect>
+            <ingestEffectEat>EatVegetarian</ingestEffectEat>
 			<ingestHoldOffsetStanding>
 				<northDefault>
 					<offset>(0.27,0,0.08)</offset>
@@ -43,42 +34,26 @@
 			<ingestHoldUsesTable>false</ingestHoldUsesTable>
 			<ingestCommandString>Smoke {0}</ingestCommandString>
 			<ingestReportString>Smoking {0}.</ingestReportString>
-			<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>NicotineHigh</hediffDef>
-					<severity>0.5</severity>
-					<toleranceChemical>Nicotine</toleranceChemical>
-				</li>
-				<li Class="IngestionOutcomeDoer_OffsetNeed">
-					<need>Rest</need>
-					<offset>0.02</offset>
-				</li>
-				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>NicotineTolerance</hediffDef>
-					<severity>0.050</severity>
-					<divideByBodySize>true</divideByBodySize>
-				</li>
-			</outcomeDoers>
 		</ingestible>
-		<recipeMaker>
+        <!--<recipeMaker>
 			<recipeUsers>
 				<li>CraftingSpot</li>
+                <li>DrugLab</li>
 			</recipeUsers>
-		</recipeMaker>
-		<costList>
-			<DriedLeavesTobacco>1</DriedLeavesTobacco>
-		</costList>
-		<comps>
+            <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+            <workSkill>Cooking</workSkill>
+		</recipeMaker>-->
+        <comps>
 			<li Class="CompProperties_Drug">
 				<chemical>Nicotine</chemical>
-				<addictiveness>0.030</addictiveness>
+				<addictiveness>0.03</addictiveness>
 				<minToleranceToAddict>0.010</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
 				<needLevelOffset>1</needLevelOffset>
 				<listOrder>21</listOrder>
 			</li>
 		</comps>
-	</ThingDef>
+    </ThingDef>
 
 	<HediffDef>
 		<defName>NicotineHigh</defName>
@@ -98,7 +73,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.01</offset>
+						<offset>0.02</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
@@ -107,7 +82,7 @@
 				</capMods>
 				<statOffsets>
 					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
-				</statOffsets>			  
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -116,7 +91,7 @@
 		<defName>NicotineHigh</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
 		<hediff>NicotineHigh</hediff>
-		<validWhileDespawned>true</validWhileDespawned>	
+		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>
 				<label>high on nicotine</label>
@@ -133,6 +108,25 @@
 		<label>Nicotine</label>
 		<addictionHediff>NicotineAddiction</addictionHediff>
 		<toleranceHediff>NicotineTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <onGeneratedAddictedEvents>
+            <li>
+                <hediff>Asthma</hediff>
+                <chance>0.15</chance>
+                <partsToAffect>
+                    <li>Lung</li>
+                </partsToAffect>
+                <countToAffect>2</countToAffect>
+            </li>
+            <li>
+                <hediff>Carcinoma</hediff>
+                <chance>0.05</chance>
+                <partsToAffect>
+                    <li>Lung</li>
+                </partsToAffect>
+                <countToAffect>1</countToAffect>
+            </li>
+        </onGeneratedAddictedEvents>
 	</ChemicalDef>
 
 	<NeedDef ParentName="DrugAddictionNeedBase">
@@ -145,7 +139,7 @@
 
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>NicotineTolerance</defName>
-		<label>Nicotine tolerance</label>
+		<label>nicotine tolerance</label>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.015</severityPerDay>
@@ -157,21 +151,19 @@
 		<hediffGivers>
 			<li Class="HediffGiver_RandomDrugEffect">
 				<hediff>Asthma</hediff>
-				<baseMtbDays>160</baseMtbDays>
+				<baseMtbDays>180</baseMtbDays>
 				<minSeverity>0.50</minSeverity>
 				<partsToAffect>
-					<li>LeftLung</li>
-					<li>RightLung</li>
+					<li>Lung</li>
 				</partsToAffect>
 				<countToAffect>2</countToAffect>
 			</li>
 			<li Class="HediffGiver_RandomDrugEffect">
 				<hediff>Carcinoma</hediff>
-				<baseMtbDays>160</baseMtbDays>
+				<baseMtbDays>180</baseMtbDays>
 				<minSeverity>0.40</minSeverity>
 				<partsToAffect>
-					<li>LeftLung</li>
-					<li>RightLung</li>
+                    <li>Lung</li>
 				</partsToAffect>
 				<countToAffect>1</countToAffect>
 			</li>
@@ -185,23 +177,36 @@
 		<causesNeed>Chemical_Nicotine</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.02</severityPerDay>
+				<severityPerDay>-0.025</severityPerDay>
 			</li>
-		</comps>			
+		</comps>
 		<stages>
-			<li>
-			</li>
+			<li></li>
 			<li>
 				<label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
 				<mentalStateGivers>
 					<li>
-						<mentalState>BingingFood</mentalState>
-						<mtbDays>5</mtbDays>
+						<mentalState>Binging_Food</mentalState>
+						<mtbDays>30</mtbDays>
 					</li>
 				</mentalStateGivers>
 				<statOffsets>
 					<MentalBreakThreshold>0.1</MentalBreakThreshold>
-				</statOffsets>		
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -210,12 +215,13 @@
 		<defName>NicotineWithdrawal</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
 		<hediff>NicotineAddiction</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>
 				<visible>false</visible>
 			</li>
 			<li>
-				<label>Nicotine withdrawal</label>
+				<label>nicotine withdrawal</label>
 				<description>I would kill for a smoke right now.</description>
 				<baseMoodEffect>-20</baseMoodEffect>
 			</li>

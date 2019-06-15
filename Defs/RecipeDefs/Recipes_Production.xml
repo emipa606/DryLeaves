@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
 	<RecipeDef Name="RollCigarPack">
 		<defName>RollCigarPack</defName>
 		<label>make cigar pack</label>
 		<description>Makes five cigars for your colonists' nicotine-infused habits.</description>
 		<jobString>Rolling cigars</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 		<workAmount>350</workAmount>
 		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
 		<effectWorking>Cook</effectWorking>
@@ -44,16 +43,16 @@
 		<workSkill>Crafting</workSkill>
 		<recipeUsers>
 			<li>CraftingSpot</li>
-		</recipeUsers>	
+            <li>DrugLab</li>
+		</recipeUsers>
 	</RecipeDef>
-
 
 	<RecipeDef Name="RollCigarChocolatePack">
 		<defName>RollCigarChocolatePack</defName>
 		<label>make chocolate cigar pack</label>
 		<description>Makes five chocolate cigars for your colonists' nicotine-infused habits.</description>
 		<jobString>Rolling cigars</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 		<workAmount>350</workAmount>
 		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
 		<effectWorking>Cook</effectWorking>
@@ -100,16 +99,16 @@
 		<workSkill>Crafting</workSkill>
 		<recipeUsers>
 			<li>CraftingSpot</li>
-		</recipeUsers>	
+            <li>DrugLab</li>
+		</recipeUsers>
 	</RecipeDef>
-
 
 	<RecipeDef Name="RollCigarettes">
 		<defName>RollCigarettes</defName>
 		<label>make cigarette mini-pack</label>
 		<description>Makes five cigarettes for your colonists' nicotine-infused habits.</description>
 		<jobString>Rolling cigarettes</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 		<workAmount>200</workAmount>
 		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
 		<effectWorking>Cook</effectWorking>
@@ -146,16 +145,16 @@
 		<workSkill>Crafting</workSkill>
 		<recipeUsers>
 			<li>CraftingSpot</li>
-		</recipeUsers>	
+            <li>DrugLab</li>
+		</recipeUsers>
 	</RecipeDef>
-
 
 	<RecipeDef Name="RollCigarettePack">
 		<defName>RollCigarettePack</defName>
 		<label>make cigarette pack (x20)</label>
 		<description>Makes a standard pack of twenty cigarettes for your colonists' nicotine-infused habits.</description>
 		<jobString>Rolling cigarettes</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 		<workAmount>350</workAmount>
 		<requiredGiverWorkType>Crafting</requiredGiverWorkType>
 		<effectWorking>Cook</effectWorking>
@@ -192,8 +191,8 @@
 		<workSkill>Crafting</workSkill>
 		<recipeUsers>
 			<li>CraftingSpot</li>
-		</recipeUsers>	
+            <li>DrugLab</li>
+		</recipeUsers>
 	</RecipeDef>
-
 
 </Defs>
