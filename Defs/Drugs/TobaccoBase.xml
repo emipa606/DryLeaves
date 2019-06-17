@@ -35,14 +35,14 @@
 			<ingestCommandString>Smoke {0}</ingestCommandString>
 			<ingestReportString>Smoking {0}.</ingestReportString>
 		</ingestible>
-        <!--<recipeMaker>
+        <recipeMaker>
 			<recipeUsers>
 				<li>CraftingSpot</li>
                 <li>DrugLab</li>
 			</recipeUsers>
             <workSpeedStat>DrugCookingSpeed</workSpeedStat>
             <workSkill>Cooking</workSkill>
-		</recipeMaker>-->
+		</recipeMaker>
         <comps>
 			<li Class="CompProperties_Drug">
 				<chemical>Nicotine</chemical>

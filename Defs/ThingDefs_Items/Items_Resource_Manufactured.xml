@@ -15,8 +15,8 @@
 			<li>Manufactured</li>
 		</thingCategories>
 		<statBases>
-			<Mass>0.2</Mass>
-			<MarketValue>2.5</MarketValue>			
+			<Mass>0.02</Mass>
+			<MarketValue>1.9</MarketValue>			
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<comps>
@@ -41,8 +41,8 @@
 			<li>Manufactured</li>
 		</thingCategories>
 		<statBases>
-			<Mass>0.2</Mass>
-			<MarketValue>0.875</MarketValue>
+			<Mass>0.02</Mass>
+			<MarketValue>1.6</MarketValue>
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<comps>
