@@ -1,7 +1,10 @@
 # Changelog
 
 ## [unreleased]
-none
+* Update to 1.0
+* Remove x5 and x20 pack recipes
+* Slightly buff nicotine drug effects
+* Tweak parameters (mass, values, ...) to better match new vanilla
 
 ## [b18.1.0] - 2017-11-18
 * Official beta 18 (0.18.1722) release (no changes from previous version)
