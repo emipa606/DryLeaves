@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="RoughPlantBase">
-		<defName>TobaccoLeaves</defName>
-		<label>tobacco leaves</label>
-		<description>Raw cut leaves of a tobacco plant. Can be dried at a drying rack and later used for crafting cigars or cigarettes.</description>
-		<graphicData>
-			<texPath>Things/Item/Drug/Tobacco/Leaves/TobaccoLeaves</texPath>
-		</graphicData>
-		<statBases>
-			<MarketValue>1.3</MarketValue>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>TobaccoLeaves</defName>
+        <label>tobacco leaves</label>
+        <description>Raw cut leaves of a tobacco plant. Can be dried at a drying rack and later used for crafting cigars or cigarettes.</description>
+        <graphicData>
+            <texPath>Things/Item/Drug/Tobacco/Leaves/TobaccoLeaves</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.3</MarketValue>
             <Flammability>1.3</Flammability>
             <Mass>0.03</Mass>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>30</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-		<thingCategories>
-			<li>PlantMatter</li>
-		</thingCategories>
-	</ThingDef>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>30</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>PlantMatter</li>
+        </thingCategories>
+    </ThingDef>
 
 </Defs>
