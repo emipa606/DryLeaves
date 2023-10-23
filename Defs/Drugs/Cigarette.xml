@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="TobaccoBase">
+        <defName>TobaccoCigarette</defName>
+        <label>cigarette</label>
+        <description>Tobacco use can produce a dependency. Can be produced without equipment, at a crafting spot.</description>
+        <graphicData>
+            <texPath>Things/Item/Drug/Tobacco/RollCigarette</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <WorkToMake>60</WorkToMake>
+            <MarketValue>6</MarketValue>
+            <Mass>0.04</Mass>
+            <DeteriorationRate>6</DeteriorationRate>
+        </statBases>
+        <ingestible>
+            <foodType>Plant, Processed</foodType>
+            <joy>0.20</joy>
+            <baseIngestTicks>720</baseIngestTicks>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>NicotineHigh</hediffDef>
+                    <severity>0.5</severity>
+                    <toleranceChemical>Nicotine</toleranceChemical>
+                </li>
+                <li Class="IngestionOutcomeDoer_OffsetNeed">
+                    <need>Rest</need>
+                    <offset>0.04</offset>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>NicotineTolerance</hediffDef>
+                    <severity>0.050</severity>
+                    <divideByBodySize>true</divideByBodySize>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <costList>
+            <DriedLeavesTobacco>1</DriedLeavesTobacco>
+        </costList>
+    </ThingDef>
+
+</Defs>
