@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Dry Leaves</name>
+  <author>Kubouch</author>
+  <url>https://gitlab.com/kubouch-rwmods/dry-leaves</url>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <description>Reimplements Jecrell's tobacco mod and adds a drying rack for drying tobacco and smokeleaf leaves.</description>
+</ModMetaData>

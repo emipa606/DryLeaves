@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "SmokeleafJoint"]/costList/SmokeleafLeaves</xpath>
+    <value>
+      <Jecs_DriedLeavesSmokeleaf>4</Jecs_DriedLeavesSmokeleaf>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "Jecs_TobaccoCigar" or defName = "Jecs_TobaccoCigarette" or defName = "Jecs_SnusPortion"]/costList/Jecs_TobaccoLeaves</xpath>
+    <value>
+      <Jecs_DriedLeavesTobacco>3</Jecs_DriedLeavesTobacco>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "Jecs_TobaccoCigarChocolate"]/costList/Jecs_TobaccoLeaves</xpath>
+    <value>
+      <Jecs_DriedLeavesTobacco>5</Jecs_DriedLeavesTobacco>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName = "Jecs_RollCigarPack" or defName = "Jecs_RollCigarChocolatePack" or defName = "Jecs_RollCigarettes" or defName = "Jecs_MakeSnusPack" or defName = "Jecs_RollCigarettePack" or defName = "Jecs_MakeSnusStock"]/ingredients/li/filter/thingDefs/li[text()="Jecs_TobaccoLeaves"]</xpath>
+    <value>
+      <li>Jecs_DriedLeavesTobacco</li>
+    </value>
+  </Operation>
+</Patch>
