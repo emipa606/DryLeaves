@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Jecs_DryingRack</defName>
+    <label>drying rack</label>
+    <description>Drying rack used for drying smokeleaf and tobacco leaves.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/LeafDryingRack</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <size>(2,1)</size>
+    <comps>
+      <li Class="ProcessorFramework.CompProperties_Processor">
+        <capacity>25</capacity>
+        <independentProcesses>true</independentProcesses>
+        <parallelProcesses>false</parallelProcesses>
+        <showProductIcon>false</showProductIcon>
+        <barOffset>(0.0, 0.5)</barOffset>
+        <processes>
+          <li>Jecs_DriedLeavesTobacco</li>
+          <li>Jecs_DriedLeavesSmokeleaf</li>
+        </processes>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+  </ThingDef>
+  <ProcessorFramework.ProcessDef>
+    <defName>Jecs_DriedLeavesTobacco</defName>
+    <thingDef>Jecs_DriedLeavesTobacco</thingDef>
+    <ingredientFilter>
+      <thingDefs>
+        <li>Jecs_TobaccoLeaves</li>
+      </thingDefs>
+    </ingredientFilter>
+    <usesTemperature>true</usesTemperature>
+    <temperatureSafe>0~65.0</temperatureSafe>
+    <temperatureIdeal>30~50</temperatureIdeal>
+    <ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour>
+    <speedBelowSafe>0.05</speedBelowSafe>
+    <speedAboveSafe>0.8</speedAboveSafe>
+    <processDays>4</processDays>
+    <efficiency>1.0</efficiency>
+    <sunFactor>0.75~1.2</sunFactor>
+    <rainFactor>1.0~0</rainFactor>
+    <snowFactor>1.0~0</snowFactor>
+    <windFactor>1.0~1.2</windFactor>
+    <filledGraphicSuffix>_tobacco</filledGraphicSuffix>
+  </ProcessorFramework.ProcessDef>
+  <ProcessorFramework.ProcessDef>
+    <defName>Jecs_DriedLeavesSmokeleaf</defName>
+    <thingDef>Jecs_DriedLeavesSmokeleaf</thingDef>
+    <ingredientFilter>
+      <thingDefs>
+        <li>SmokeleafLeaves</li>
+      </thingDefs>
+    </ingredientFilter>
+    <usesTemperature>true</usesTemperature>
+    <temperatureSafe>0~65.0</temperatureSafe>
+    <temperatureIdeal>30~50</temperatureIdeal>
+    <ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour>
+    <speedBelowSafe>0.05</speedBelowSafe>
+    <speedAboveSafe>0.8</speedAboveSafe>
+    <processDays>4</processDays>
+    <efficiency>1.0</efficiency>
+    <sunFactor>0.75~1.2</sunFactor>
+    <rainFactor>1.0~0</rainFactor>
+    <snowFactor>1.0~0</snowFactor>
+    <windFactor>1.0~1.2</windFactor>
+    <filledGraphicSuffix>_smokeleaf</filledGraphicSuffix>
+  </ProcessorFramework.ProcessDef>
+</Defs>

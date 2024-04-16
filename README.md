@@ -19,10 +19,16 @@ Reimplements Jecrell's tobacco mod and adds a drying rack building for drying to
 - Smokeleaf and tobacco leaves need to be dried before they can be rolled.
 - New drying rack building for drying the leaves
 
+
+
 # Instructions
+
+
 
 - You can choose which leaves to dry (tobacco or smokeleaf) using an in-game button when you select the drying rack building
 - Leaves get dried faster in hot weather, under the sun sunlight and in a wind. Rain and snow slows and stops the drying process.
+
+
 
 # Authors
 
@@ -46,4 +52,7 @@ Licensed under https://creativecommons.org/licenses/by-sa/4.0]CC BY-SA 4.0.
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
 
+
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/3059242478]![Image](https://img.shields.io/github/v/release/emipa606/DryLeaves?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
 

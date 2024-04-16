@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>4be7baa6-42cb-4879-bcdb-e09310b05efa</ID>
   <ModName>Dry Leaves (Continued)</ModName>
-  <Version>1.4.1</Version>
+  <Version>1.5.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,8 +12,3 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
-
-
-
-
-
