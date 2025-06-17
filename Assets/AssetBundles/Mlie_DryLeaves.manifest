@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 1286885329
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3cdd95419e09528fc1d81e61274d8022
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3cdd95419e09528fc1d81e61274d8022
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_smokeleaf_north.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_tobacco_north.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesTobacco/DriedLeavesTobacco_c.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesTobacco/DriedLeavesTobacco_a.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesSmokeleaf/DriedLeavesSmokeleaf_a.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_north.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesTobacco/DriedLeavesTobacco_b.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesSmokeleaf/DriedLeavesSmokeleaf_c.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Item/Resource/DriedLeavesSmokeleaf/DriedLeavesSmokeleaf_b.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_east.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_smokeleaf_east.png
+- Assets/Data/Mlie.DryLeaves/Textures/Things/Building/Production/LeafDryingRack_tobacco_east.png
+Dependencies: []

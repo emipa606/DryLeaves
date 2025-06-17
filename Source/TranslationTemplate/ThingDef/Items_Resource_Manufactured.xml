@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: dried smokeleaf leaves -->
+  <Jecs_DriedLeavesSmokeleaf.label>dried smokeleaf leaves</Jecs_DriedLeavesSmokeleaf.label>
+  <!-- EN: Dried smokeleaves. Can be used for rolling joints at a crafting spot. -->
+  <Jecs_DriedLeavesSmokeleaf.description>Dried smokeleaves. Can be used for rolling joints at a crafting spot.</Jecs_DriedLeavesSmokeleaf.description>
+  <!-- EN: dried tobacco leaves -->
+  <Jecs_DriedLeavesTobacco.label>dried tobacco leaves</Jecs_DriedLeavesTobacco.label>
+  <!-- EN: Dried tobacco leaves. Can be used for rolling cigars or cigarettes at a crafting spot. -->
+  <Jecs_DriedLeavesTobacco.description>Dried tobacco leaves. Can be used for rolling cigars or cigarettes at a crafting spot.</Jecs_DriedLeavesTobacco.description>
+</LanguageData>
